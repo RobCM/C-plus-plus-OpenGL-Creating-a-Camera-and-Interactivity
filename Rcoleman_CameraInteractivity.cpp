@@ -31,7 +31,7 @@ bool movingUp = false; // Whether or not we are moving up or down
 float yLocation = 0.0f; // Keep track of our position on the y axis.  
 float yRotationAngle = 0.0f; // The angle of rotation for our object 
 
-// ------------The camara functions-------------
+// ------------The camera functions-------------
 void renderScene(void) // Rendering
 {
 	// Reset transformations
@@ -61,7 +61,7 @@ void changeSize(int w, int h) // View
 	// Get Back to the Modelview
 	glMatrixMode(GL_MODELVIEW);
 }
-// Keys to control the camara
+// Keys to control the camera
 void camara(int key, int xx, int yy)
 {
 	float fraction = 0.1f;
@@ -89,7 +89,7 @@ void camara(int key, int xx, int yy)
   }
 	glFlush();  // Render now
 }
-//----------End of camara functions-------------
+//----------End of camera functions-------------
 
 // The function that constracts the objects
 void OBJECTS(void)
@@ -141,7 +141,7 @@ int main(int argc, char** argv)
 	glutInitWindowPosition(200, 100);
 	// Create a window with the given title
 	glutCreateWindow("Camera and Interactivity");	
-	// Calling the camara functions
+	// Calling the camera functions
 	glutDisplayFunc(renderScene);
 	glutReshapeFunc(changeSize);
 	glutIdleFunc(renderScene);
